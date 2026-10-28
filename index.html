@@ -5,7 +5,35 @@
   <title>お薦めな食べ物</title>
 </head>
 <body>
-  <h1>Webシステム構築基礎 第2回課題</h1>
+　<div id="clock-container" style="background-color: #f0f4ff; border: 2px solid #3a6bc9; border-radius: 8px; padding: 15px; text-align: center; margin: 15px 0;">
+  　<p style="margin: 0; font-size: 14px; color: #555;">現在時刻</p>
+  　<div id="clock" style="font-size: 32px; font-weight: bold; color: #3a6bc9;">--:--:--</div>
+　</div>
+
+　<script>
+  　function updateClock() {
+    // 現在時刻を取得
+    　const now = new Date();
+    
+    // 時、分、秒を取得し、2桁（例: 09）にフォーマット
+    　const hours = String(now.getHours()).padStart(2, '0');
+    　const minutes = String(now.getMinutes()).padStart(2, '0');
+    　const seconds = String(now.getSeconds()).padStart(2, '0');
+    
+    // 表示用テキストの作成
+    　const timeString = `${hours}:${minutes}:${seconds}`;
+    
+    // HTML要素を書き換え
+    　document.getElementById('clock').textContent = timeString;
+  　}
+
+  // 初回実行（ページ読み込み時に表示）
+  　updateClock();
+
+  // 1秒（1000ミリ秒）ごとに updateClock 関数を実行
+  　setInterval(updateClock, 1000);
+　</script>
+  
   <p>氏名：山岡 洸介(AAA24147)</p>
 
   <h2>お薦めな食べ物紹介</h2>
