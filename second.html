@@ -12,41 +12,6 @@
      <p><label>BMI：<output name="bmi"></output></label></p>
  </form>
 
- <h2>発展課題<h2> 
- <form onsubmit="return false" style="background: #f0f4ff; border: 2px solid #3a6bc9; border-radius: 8px; padding: 15px; margin: 15px 0;">
-     <p style="margin: 0 0 10px 0; font-weight: bold; color: #3a6bc9;">四則演算カリキュレーター</p>
-    
-     <div style="margin-bottom: 10px;">
-         <input type="number" id="num01" style="width: 80px;"> 演算 
-         <input type="number" id="num02" style="width: 80px;"> ＝ 
-         <output for="num01 num02" id="result0" style="font-weight: bold; color: #3a6bc9; font-size: 18px;"></output>
-     </div>
-
-    <!-- ラジオボタンの選択肢（足す・引く・掛ける・割る） -->
-     <div style="margin-bottom: 10px;">
-         <input id="plus" type="radio" name="cal0" value="+" checked>
-         <label for="plus" style="margin-right: 10px;">足す</label>
-        
-         <input id="minus" type="radio" name="cal0" value="-">
-         <label for="minus" style="margin-right: 10px;">引く</label>
-        
-         <input id="multiply" type="radio" name="cal0" value="*">
-         <label for="multiply" style="margin-right: 10px;">掛ける</label>
-        
-         <input id="divide" type="radio" name="cal0" value="/">
-         <label for="divide">割る</label>
-     </div>
-
-     <button onclick="result0.value =
-         (cal0[0].checked)? Number(num01.value) + Number(num02.value) :
-         (cal0[1].checked)? Number(num01.value) - Number(num02.value) :
-         (cal0[2].checked)? Number(num01.value) * Number(num02.value) :
-         (cal0[3].checked)? Number(num01.value) / Number(num02.value) : NaN"
-         style="background: #3a6bc9; color: white; border: none; padding: 5px 15px; border-radius: 4px; cursor: pointer;">
-        計算
-     </button>
-  </form>
-
   <p>氏名：山岡 洸介(AAA24147)</p>
 
   <h2>お薦めな旅行先紹介</h2>
